@@ -69,7 +69,7 @@ class TicTacToe
      win_postion_2 = el[1]
      win_postion_3 = el[2]
      
-     if @board[win_postion_1] == @board[win_postion_2] && @board 
+     
    
    
    
