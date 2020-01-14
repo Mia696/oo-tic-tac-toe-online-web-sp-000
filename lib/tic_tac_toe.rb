@@ -15,4 +15,4 @@ class TicTacToe
     ]
     
    def display_board
-     puts "#{@board[]"} | 
+     puts "#{@board[]"} | "#{@board[]"}
