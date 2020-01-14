@@ -69,7 +69,48 @@ class TicTacToe
      win_postion_2 = el[1]
      win_postion_3 = el[2]
      
-     
+     if @board[win_position_1] == @board[win_position_2] && @board[win_position_2] == @board[win_position_3] && @board[win_position_1] != " "
+        return el
+      end
+    end
+    false
+  end
+
+  def full?
+    @board.none?{|el| el == " " || el == "" || el == nil}
+  end
+
+  def draw?
+    if full? == true && won? == false
+      true
+    end
+  end
+
+  def over?
+    if full? == true || won? != false || draw? == true
+      true
+    end
+  end
+
+  def winner
+    if won? != false
+      (@board[won?[0]])
+    end
+  end
+
+  def play
+    until over? == true
+      turn
+  end
+
+    if won? != false
+      puts "Congratulations #{winner}!"
+    elsif draw? == true
+      puts "Cat's Game!"
+    end
+  end
+end
+
    
    
    
